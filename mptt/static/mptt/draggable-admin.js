@@ -204,7 +204,7 @@ django.jQuery(function($){
                     var pastedOn = moveTo.relativeTo.find('.tree-node').data('pk');
 
                     // get out early if items are the same
-                    if(cutItem != pastedOn) {
+                    if(cutItem != pastedOn && confirm("Möchten Sie das Element wirklich verschieben?")) {
                         var isParent = (
                            rowLevel(moveTo.relativeTo.next()) >
                            rowLevel(moveTo.relativeTo));
